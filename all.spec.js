@@ -41,12 +41,12 @@ describe('use reduce rewrite ', () => {
 
     it('integrate', () => {
         expect(integrate(
-            x => x**3,
-            1,3
+            x => x**3, // function to integrate
+            1, 3       // integration interval
         )).toEqual(20)
         expect(integrate(
-            x => x**4,
-            1,3
+            x => x**4, // function to integrate
+            1, 3       // integration interval
         )).toEqual(48.4)
     })
     describe('monoids', () => {
