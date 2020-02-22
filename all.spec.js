@@ -38,16 +38,17 @@ describe('use reduce rewrite ', () => {
     it('some', () => {
         expect(some(LIST, IS_EVEN)).toEqual(LIST.some(IS_EVEN));
     });
-
-    it('integrate', () => {
-        expect(integrate(
-            x => x**3, // function to integrate
-            1, 3       // integration interval
-        )).toEqual(20);
-        expect(integrate(
-            x => x**4, // function to integrate
-            1, 3       // integration interval
-        )).toEqual(48.4);
+    describe('more math', () => {
+        it('integrate', () => {
+            expect(integrate(
+                x => x**3, // function to integrate
+                1, 3       // integration interval
+            )).toEqual(20);
+            expect(integrate(
+                x => x**4, // function to integrate
+                1, 3       // integration interval
+            )).toEqual(48.4);
+        });
     });
     describe('monoids', () => {
         it('sum', () => {
