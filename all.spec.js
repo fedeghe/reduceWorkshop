@@ -38,6 +38,7 @@ describe('use reduce rewrite ', () => {
     it('some', () => {
         expect(some(LIST, IS_EVEN)).toEqual(LIST.some(IS_EVEN));
     });
+
     describe('more math', () => {
         it('integrate', () => {
             expect(integrate(
@@ -50,6 +51,7 @@ describe('use reduce rewrite ', () => {
             )).toEqual(48.4);
         });
     });
+    
     describe('monoids', () => {
         it('sum', () => {
             expect(sum(LIST)).toEqual(10);
