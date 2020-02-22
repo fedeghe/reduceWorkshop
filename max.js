@@ -1,4 +1,4 @@
 const fn = (acc, el) => Math.max(acc, el),
-    idendityElement = -Infinity;
+    identityElement = -Infinity;
 
-module.exports = list => list.reduce(fn, idendityElement);
+module.exports = list => list.reduce(fn, identityElement);

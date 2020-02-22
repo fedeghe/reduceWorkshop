@@ -1,4 +1,4 @@
 const fn = (acc, el) => acc + el,
-    idendityElement = 0;
+    identityElement = 0;
 
-module.exports = list => list.reduce(fn, idendityElement);
+module.exports = list => list.reduce(fn, identityElement);
