@@ -1,1 +1,4 @@
-module.exports = (list, fn) => list.reduce((acc, el) => acc || (fn(el) ? el : acc), undefined)
+module.exports = (list, fn) => list.reduce(
+    (acc, el) => acc || (fn(el) ? el : acc),
+    undefined
+)
