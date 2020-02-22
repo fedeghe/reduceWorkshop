@@ -58,7 +58,20 @@ module.exports = [{
     interval: [2, 5],
     step: 0.001,
     expected: parseFloat((
-        (3**5 - 3**2) / Math.log(3)
+        (3 ** 5 - 3 ** 2) / Math.log(3)
+    ).toFixed(3), 10)
+}, {
+    /**
+     * ∫x e^x dx = (p.p) = x * e^x - ∫e^x = (x-1) * e^x
+     * 
+     * thus from 3 to 5
+     * 4e^5 - 2e^3 = 202.6144
+     */
+    fn : x => x * Math.E ** x,
+    interval: [3, 5],
+    step: 0.001,
+    expected: parseFloat((
+        4 * Math.E ** 5 - 2 * Math.E ** 3
     ).toFixed(3), 10)
 },
 
@@ -67,7 +80,7 @@ module.exports = [{
  * https://en.wikipedia.org/wiki/Lists_of_integrals
  */
 {
-    fn : x => 1 / x ** x,
+    fn : x => x ** -x,
     interval: [0, 1],
     step: 0.00001,
     expected: 1.29128 
