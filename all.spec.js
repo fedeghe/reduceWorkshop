@@ -12,6 +12,7 @@ const concatList = require('./concatList')
 const concatObject = require('./concatObject')
 const concatString = require('./concatString')
 const compose = require('./compose')
+const integrate = require('./integrate')
 
 describe('use reduce rewrite ', () => {
     const LIST = [1, 2, 3, 4]
@@ -36,6 +37,17 @@ describe('use reduce rewrite ', () => {
 
     it('some', () => {
         expect(some(LIST, IS_EVEN)).toEqual(LIST.some(IS_EVEN))
+    })
+
+    it('integrate', () => {
+        expect(integrate(
+            x => x**3,
+            1,3
+        )).toEqual(20)
+        expect(integrate(
+            x => x**4,
+            1,3
+        )).toEqual(48.4)
     })
     describe('monoids', () => {
         it('sum', () => {
