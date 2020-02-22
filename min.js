@@ -1,4 +1,4 @@
-const fn = (acc, el) => Math.min(acc, el)
-const idendityElement = Infinity
+const fn = (acc, el) => Math.min(acc, el),
+    idendityElement = Infinity;
 
-module.exports = list => list.reduce(fn, idendityElement)
+module.exports = list => list.reduce(fn, idendityElement);

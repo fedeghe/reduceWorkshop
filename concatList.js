@@ -1,4 +1,4 @@
-const fn = (acc, el) => [...acc, ...el]
-const idendityElement = []
+const fn = (acc, el) => [...acc, ...el],
+    idendityElement = [];
 
-module.exports = list => list.reduce(fn, idendityElement)
+module.exports = list => list.reduce(fn, idendityElement);
