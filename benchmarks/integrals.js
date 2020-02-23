@@ -35,10 +35,10 @@ module.exports = [{
     ).toFixed(2), 10)
 }, {
     /**
-     * ∫ln(x) dx = x * ln(x) -5 + C
+     * ∫ln(x) dx = x * ln(x) - x + C
      * 
      * thus from 3 to 5
-     * 5 * ln 5 - 2 * ln 2
+     * 5*ln5 -5 - (2*ln2 -2)
      */
     fn : x => Math.log(x),
     interval: [2, 5],
