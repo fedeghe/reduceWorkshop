@@ -3,7 +3,7 @@
  * defined integral of a function ∈ C¹ (in a defined interval, obviously)
  * ----------------
  */
-module.exports = (fn, a, b, dx = 0.01) => {
+const integrate = (fn, a, b, dx = 0.01) => {
     const precisionMatch = `${dx}`.match(/\.(\d+)/),
         precision = precisionMatch ? precisionMatch[1].length : 0,
         steps = (b - a) / dx,
@@ -13,3 +13,5 @@ module.exports = (fn, a, b, dx = 0.01) => {
         0);
     return precision ? parseFloat(res.toFixed(precision), 10) : res;
 };
+
+module.exports = integrate

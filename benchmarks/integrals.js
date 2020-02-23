@@ -89,4 +89,25 @@ module.exports = [{
     interval: [0, 1],
     step: 0.00001,
     expected: 0.78342 
+},
+
+/**
+ * what about functions ∉ C ? 
+ * e.g.
+ * 
+ * 3
+ * ∫ 2 + sgn(x) dx
+ * -3
+ *    |---
+ *    |
+ * ---|
+ * ----------
+ * 
+ * should give 12
+ */
+{
+    fn : x => 2 + (x > 0 ? 1 : -1),
+    interval: [-3, 3],
+    step: 0.1,
+    expected: 12 
 }];
