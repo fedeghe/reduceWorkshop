@@ -11,8 +11,7 @@ const map = require('./map'),
     concatList = require('./concatList'),
     concatObject = require('./concatObject'),
     concatString = require('./concatString'),
-    compose = require('./compose'),
-    integrate = require('./integrate');
+    compose = require('./compose');
 
 describe('use reduce rewrite ', () => {
     const LIST = [1, 2, 3, 4],
