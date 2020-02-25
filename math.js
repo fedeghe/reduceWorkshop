@@ -1,7 +1,9 @@
 const withPrecision = dx => {
     const precisionMatch = `${dx}`.match(/\.(\d+)/),
         precision = precisionMatch ? precisionMatch[1].length : 0;
-    return v => precision ? parseFloat(v.toFixed(precision), 10) : v;
+    return precision
+        ? v => parseFloat(v.toFixed(precision), 10)
+        : v => v;
 }
 
 /**
